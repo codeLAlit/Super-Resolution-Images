@@ -17,6 +17,11 @@ sum with the loss of images detected as fake by discriminator.
 
 ![26](readme_assets/26.png "LR images (26x26)")
 
+*LR Images (26x26)*
+
 ![28](readme_assets/28.png "HR images (28x28)")
+
+*HR Images (28x28)*
+
 
 Results come out to be satisfactory considering the simplicity of the model.
