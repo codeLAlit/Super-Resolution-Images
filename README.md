@@ -24,4 +24,27 @@ sum with the loss of images detected as fake by discriminator.
 *HR Images (28x28)*
 
 
-Results come out to be satisfactory considering the simplicity of the model.
+Results came out to be satisfactory considering the simplicity of the model.
+
+## CPPN
+
+CPPN stands for Compositional Pattern Producing Network.
+
+**How it works?**
+
+Suppose if we can represent an image pixel intensity as an output of the function `f(w, x, y, r)`, the output is a single number in case of black and white image or a vector of three numbers between 0 to 1 representing the intensity of the pixel. It learns the relation between (x, y) and r (radius) of 
+a line at that point. These models are very specific, they can only draw what they are trained on. Using CPPN helps to generate suprisingly high resolution images.
+
+The idea was taken form [here](https://github.com/hardmaru/cppn-tensorflow).
+
+In the file I just took a random vector and generated images. We can combine this with GAN and produce Super Resolution meaningful images. Here are some results, images are of 1800x1800 resolution.
+
+![bw_cppn](readme_assets/bw_cppn.png "BW Image")
+
+
+![color_cppn](readme_assets/color_cppn.png "COLOR Image")
+
+## Future Work
+
+Combine above GAN and CPPN to produce super resolution MNSIT images. In that case we will train the CPPN for 28x28 output and then will use the weights to
+generate higher resolution images.
