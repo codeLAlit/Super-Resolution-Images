@@ -44,7 +44,18 @@ In the file I just took a random vector and generated images. We can combine thi
 
 ![color_cppn](readme_assets/color_cppn.png "COLOR Image")
 
-## Future Work
+## Final Model
 
-Combine above GAN and CPPN to produce super resolution MNSIT images. In that case we will train the CPPN for 28x28 output and then will use the weights to
-generate higher resolution images.
+We have all bits in place, all we need is to combine them. I combined the GAN build before with this CPPN. The encoder part is generating a **latent vector** that with coordinate matrix is fed into the CPPN. The image generated is then passed into a discriminator. One may ask what is the need of the 
+discriminator here, we can just use the pixel wise error to determine the loss. It is observed that in such a method the images produced are blurry. That's
+why discriminator plays an important role here.
+
+Due to resource scarity I trained the modelover 30 epochs only with a batch size of 32 (batch size is hard coded). The results are little bit blurry. But on seeing current results we can expect that they will improve when we will increase the epochs. 
+
+![train](readme_assets/26.png "SR images for training purpose (28x28)")
+
+*SR images for training purpose (28x28)*
+
+![Result](readme_assets/28.png "SR image (100x100)")
+
+*SR image (100x100)*
