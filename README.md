@@ -52,10 +52,10 @@ why discriminator plays an important role here.
 
 Due to resource scarity I trained the modelover 30 epochs only with a batch size of 32 (batch size is hard coded). The results are little bit blurry. But on seeing current results we can expect that they will improve when we will increase the epochs. 
 
-![train](readme_assets/26.png "SR images for training purpose (28x28)")
+![train](readme_assets/final.png "SR images for training purpose (28x28)")
 
 *SR images for training purpose (28x28)*
 
-![Result](readme_assets/28.png "SR image (100x100)")
+![Result](readme_assets/final_output.png "SR image (100x100)")
 
 *SR image (100x100)*
